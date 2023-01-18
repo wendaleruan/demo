@@ -1,0 +1,15 @@
+--- 
+const { url, title, author, image} = Astro.props;
+---
+<a href={url}>
+    <div class="id_news_item">
+        <div class="id_news_image_container">
+            <img src={image} />
+        </div>
+        <div class="id_news_content">
+            <h4 class="body-2-bold id_news_title" >{title}</h4>
+            <p class="caption">{author}</p>
+        </div>
+    </div>
+</a>
+

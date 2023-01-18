@@ -1,36 +1,55 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import PostLayout from "./PostLayout.astro";
+
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout pageTitle={frontmatter.title}>
-<p>{frontmatter.pubDate.slice(0,10)}</p>
-<p><em>{frontmatter.description}</em></p>
-<p>Written by: {frontmatter.author}</p>
-<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-<div class="tags">
-    {frontmatter.tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-    ))}
-  </div>
-<slot />
-</BaseLayout>
-<style>
-    a {
-      color: #00539F;
-    }
-              
-    .tags {
-      display: flex; 
-      flex-wrap: wrap; 
-      margin: 0 auto;  
-    }
-  
-    .tag {
-      margin: 0.25em;
-      border: dotted 1px #a1a1a1;
-      border-radius: .5em;
-      padding: .5em 1em;
-      font-size: 1.15em;
-      background-color: #F8FCFD;
-    }
-  </style>
+<PostLayout pageTitle={frontmatter.title} author={frontmatter.author} pubDate={frontmatter.pubDate.slice(0,10)}>
+  <div class="id_image_container">
+    <img class="id_image" src="/images/06.jpg" />
+</div>
+<div class="caption id_contentHtml">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Id volutpat lacus laoreet non. Eu ultrices vitae
+        auctor eu augue ut lectus. In ante metus dictum at tempor
+        commodo ullamcorper a lacus. Etiam non quam lacus
+        suspendisse. Porttitor leo a diam sollicitudin tempor id eu
+        nisl. Auctor urna nunc id cursus metus aliquam eleifend mi.
+        Aliquam vestibulum morbi blandit cursus risus at.
+        Sollicitudin tempor id eu nisl nunc. Amet nisl suscipit
+        adipiscing bibendum. Est ullamcorper eget nulla facilisi
+        etiam. At urna condimentum mattis pellentesque. Volutpat ac
+        tincidunt vitae semper quis lectus nulla at. Aliquet
+        porttitor lacus luctus accumsan tortor posuere. Ut ornare
+        lectus sit amet est placerat. Mollis nunc sed id semper.
+        Donec ultrices tincidunt arcu non sodales neque. Scelerisque
+        mauris pellentesque pulvinar pellentesque habitant morbi
+        tristique. Quis imperdiet massa tincidunt nunc pulvinar
+        sapien et ligula ullamcorper. Ornare massa eget egestas
+        purus viverra accumsan. Aliquet bibendum enim facilisis
+        gravida. In hac habitasse platea dictumst quisque sagittis
+        purus sit amet. Enim blandit volutpat maecenas volutpat
+        blandit. Varius sit amet mattis vulputate enim nulla
+        aliquet. Tincidunt nunc pulvinar sapien et ligula
+        ullamcorper malesuada proin. Nulla pellentesque dignissim
+        enim sit amet venenatis urna cursus eget. Vivamus at augue
+        eget arcu dictum varius duis at consectetur. Quam viverra
+        orci sagittis eu volutpat odio facilisis. Faucibus in ornare
+        quam viverra orci sagittis eu volutpat. Mi quis hendrerit
+        dolor magna eget. Donec pretium vulputate sapien nec
+        sagittis aliquam malesuada bibendum arcu. Egestas integer
+        eget aliquet nibh.
+    </p>
+
+ 
+</div>
+  <!-- <p><em>{frontmatter.description}</em></p>
+  <p>Written by: {frontmatter.author}</p>
+  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  <div class="tags">
+      {frontmatter.tags.map((tag) => (
+        <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+      ))}
+    </div> -->
+</PostLayout>

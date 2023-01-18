@@ -1,0 +1,15 @@
+---
+import Breadcrumb from "./Breadcrumb.astro";
+const { pageTitle, urlName, seconedTitle } = Astro.props;
+---
+
+<div class="section bigtitle_section">
+    <div class="container bigtitle_container">
+        <div class="bigtitle_content">
+            <Breadcrumb urlName={urlName} />
+            <h1 class="hero bigtitle_title">{pageTitle}</h1>
+            <p class="body">{seconedTitle}</p>
+        </div>
+        <slot />
+    </div>
+</div>

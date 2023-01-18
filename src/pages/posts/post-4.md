@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: My Fourth Blog Post
-author: Astro Learner
+author: Astrodd
 description: "This post will show up on its own!"
 image: 
   url: "https://astro.build/assets/cover_Z1RSGKy.avif"
