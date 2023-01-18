@@ -2,10 +2,10 @@
 @import './helpers.css';
 @import './reset.css';
 
-@import './blocks/section.css';
-@import './blocks/title.css';
-@import './blocks/container.css';
-@import './blocks/button.css';
+@import './section.css';
+@import './title.css';
+@import './container.css';
+@import './button.css';
 
 @import './header.css';
 @import './bigtitle.css';
@@ -13,3 +13,8 @@
 @import './blogitem.css';
 @import './id.css';
 @import './footer.css';
+
+@import './banner.css';
+@import './stats.css';
+@import './news.css';
+@import './textoverlap.css';

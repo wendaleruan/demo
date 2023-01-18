@@ -3,7 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import Bigtitle from '../components/Bigtitle.astro';
-const { pageTitle,urlName,seconedTitle} = Astro.props;
+const { pageTitle,urlName,seconedTitle,navbgStyle} = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -14,7 +14,7 @@ const { pageTitle,urlName,seconedTitle} = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
+    <Header navbgStyle={navbgStyle}/>
     <Bigtitle pageTitle={pageTitle} urlName={urlName} seconedTitle={seconedTitle}>
     <slot />
     </Bigtitle>

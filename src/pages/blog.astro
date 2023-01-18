@@ -4,11 +4,12 @@ import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob('../pages/posts/*.md');
 
 const pageTitle = "Blog";
-const urlName = "Blog";
-const seconedTitle = "This is the seconedTitle for blog page!";
+const urlName = "博客";
+const seconedTitle = "我的博客文章全部都在这里啦!";
+const navbgStyle = "background: rgb(252, 252, 253); border-bottom: 1px solid rgba(35, 38, 47, 0.1)";
 ---
 
-<BaseLayout pageTitle={pageTitle} urlName={urlName} seconedTitle={seconedTitle}>
+<BaseLayout pageTitle={pageTitle} urlName={urlName} seconedTitle={seconedTitle} navbgStyle = {navbgStyle}>
     <div class="blogitem_wrapper">
         {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} author={post.frontmatter.author} image={post.frontmatter.image.url}/>)}
     </div>

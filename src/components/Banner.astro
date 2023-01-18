@@ -1,0 +1,48 @@
+---
+const {banner_span,banner_title,banner_subtitle} = Astro.props;
+---
+<div class="section banner_section">
+    <div class="container">
+      <div class="banner_content">
+        <span class="hairline banner_span">{banner_span}</span>
+        <h1 class="hero banner_title">{banner_title}</h1>
+        <p class="body banner_subtitle">{banner_subtitle}</p>
+        <div class="banner_wrapper">
+          <a href="/blog/"><button class="button banner_button">看看文章</button></a>
+          <a href="/about/"><button class="button button-stroke banner_button">关于我</button></a>
+        </div>
+        <div class="banner_stats_wrapper">
+          <div>
+            <div class="stats_container">
+              <h4 class="h4 stats_title">40</h4>
+              <p class="caption">
+                访问次数
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="stats_container">
+              <h4 class="h4 stats_title">12</h4>
+              <p class="caption">
+                文章数量
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner_image_container">
+        <span style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0">
+          <img
+            src="/images/avatar2.jpg"
+            decoding="async"
+            data-nimg="fill"
+            class="banner_image"
+            style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            sizes="100vw"
+            srcset="/images/avatar2.jpg"
+          />
+        </span>
+        <div class="banner_overlay"></div>
+      </div>
+    </div>
+  </div>

@@ -1,10 +1,36 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting.jsx';
-const pageTitle = "Home Page";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Banner from "../components/Banner.astro";
+import News from "../components/News.astro";
+import "../styles/global.css";
+
+const pageTitle = "主页";
+const logoColor = "color: rgb(252, 252, 253);";
+
+
+//set banner
+const banner_span = "DESIGN + CODE";
+const banner_title = "Hi！你好呀~ 这是我的主页";
+const banner_subtitle = "这个博客网站主要是玩Astro的试验品，Astro似乎不难上手，入门很快！";
 
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
-</BaseLayout>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header logoColor={logoColor} />
+    <Banner banner_span={banner_span} banner_title={banner_title} banner_subtitle={banner_subtitle} />
+    <News />
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.textoverlap_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.textoverlap_title {
+  position: absolute;
+}
+
+.textoverlap_text {
+  color: var(--n6);
+}
+
+@media (max-width: 768px) {
+  .textoverlap_container {
+    justify-content: center;
+  }
+}

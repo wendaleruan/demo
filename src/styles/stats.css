@@ -1,0 +1,16 @@
+.stats_container {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.stats_title {
+  color: var(--n8);
+}
+
+@media (max-width: 768px) {
+  .stats_title {
+    font-size: 24px;
+    line-height: (32/24);
+    letter-spacing: -0.01em;
+  }
+}
